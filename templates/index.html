@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sales</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" type="x-icon" href="/static/pumpkin-bag.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Danfo&family=DynaPuff:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&family=Sixtyfour+Convergence&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="staff">
+      <section class="s1">
+        
+        <h1>Welcome to <span>Store Sales Analytics!</span> <br> This application provides insights <br> into <span>store</span> performance, product <br> details, and <span>sales analytics.</span></h1>
+      </section>
+      <marquee scrollamount="100" direction="right" class="caution-tape"> CAUTION!
+        CAUTION!
+        CAUTION!
+        CAUTION!
+        CAUTION!
+        CAUTION!
+        CAUTION!
+        CAUTION!
+        CAUTION!
+        CAUTION!
+        CAUTION!
+        CAUTION!
+        CAUTION!
+        CAUTION!
+        CAUTION!
+        CAUTION!
+        CAUTION!
+        CAUTION!
+        CAUTION!
+        CAUTION!
+        CAUTION!
+        CAUTION!
+      </marquee>
+
+      <section class="s2">
+        <h1 class="h2">This page displays a list of all stores, including their names,<br> addresses,  and working hours. Explore <span><a href="http://127.0.0.1:5000/stores">stores</a></span><br> information  for better understanding <br> of your  store network.</h1>
+        
+      </section>
+      <marquee scrollamount="100" direction="right" class="caution-tape"> DON'T SCROLL!
+        DON'T SCROLL!
+        DON'T SCROLL!
+        DON'T SCROLL!
+        DON'T SCROLL!
+        DON'T SCROLL!
+        DON'T SCROLL!
+        DON'T SCROLL!
+        DON'T SCROLL!
+        DON'T SCROLL!
+        DON'T SCROLL!
+        DON'T SCROLL!
+        DON'T SCROLL!
+        DON'T SCROLL!
+        DON'T SCROLL!
+        DON'T SCROLL!
+        DON'T SCROLL!
+        DON'T SCROLL!
+        DON'T SCROLL!
+      </marquee>
+      <section class="s3">
+        <h1 class="h3">View all available <span><a href="http://127.0.0.1:5000/products">products</a></span> along with  their<br> prices. Find detailed information about each product<br> and explore pricing to help track product performance.</h1>
+
+      </section>
+      <marquee scrollamount="100" direction="right" class="caution-tape"> STOP!!!
+                
+
+      </marquee>
+      <section class="s4">
+        <h1 class="h4"><span><a href="http://127.0.0.1:5000/analytics">Analize</a></span> sales data with insights on sale dates, quantities sold, <br> and store performance. Use filters for dates, stores, or products to <br> gain precise sales insights.</h1>
+
+      </section>
+    </div>
+
+    <!-- JavaScript for smooth debounced scrolling between sections -->
+    <script>
+      const sections = document.querySelectorAll("section"); // Get all sections
+      let currentSectionIndex = 0; // Track the current section
+      let isScrolling = false; // Prevent multiple scrolls until transition completes
+    
+      function scrollToSection(index) {
+        const targetPosition = sections[index].offsetTop; // Get target section's position
+        const startPosition = window.scrollY; // Current scroll position
+        const distance = targetPosition - startPosition; // Calculate distance to scroll
+        const duration = 1500; // Duration of the scroll effect in ms (adjust for slower effect)
+        let startTime = null;
+    
+        function animation(currentTime) {
+          if (startTime === null) startTime = currentTime;
+          const timeElapsed = currentTime - startTime;
+          const run = ease(timeElapsed, startPosition, distance, duration);
+          window.scrollTo(0, run); // Scroll to the calculated position
+          if (timeElapsed < duration) requestAnimationFrame(animation); // Continue the animation
+          else isScrolling = false; // Enable scrolling again after animation completes
+        }
+    
+        function ease(t, b, c, d) {
+          // Easing function for smooth effect
+          t /= d / 2;
+          if (t < 1) return (c / 2) * t * t + b;
+          t--;
+          return (-c / 2) * (t * (t - 2) - 1) + b;
+        }
+    
+        isScrolling = true; // Disable further scrolling while transitioning
+        requestAnimationFrame(animation);
+      }
+    
+      // Scroll event listener
+      window.addEventListener("wheel", (event) => {
+        if (isScrolling) return; // Do nothing if scrolling is in progress
+        if (event.deltaY > 0) {
+          // Scroll down
+          if (currentSectionIndex < sections.length - 1) {
+            currentSectionIndex++;
+            scrollToSection(currentSectionIndex);
+          }
+        } else {
+          // Scroll up
+          if (currentSectionIndex > 0) {
+            currentSectionIndex--;
+            scrollToSection(currentSectionIndex);
+          }
+        }
+      });
+    </script>
+    
+
+  </body>
+</html>
+
+<style>
+marquee {
+    background-color: rgb(255, 238, 0); /* Yellow background */
+    height: 100px;
+    line-height: 100px; /* Center the text vertically */
+    font-weight: bold; /* Make text bold */
+    font-size: 60px; /* Adjust the text size as needed */
+    overflow: hidden; /* Prevent overflow */
+}
+
+
+
+  body {
+    overflow: hidden ;
+    font-family: "Syne", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: rgb(255, 115, 0);
+    background-image:url(/static/noise\ copy.svg);
+    z-index: -1; 
+  }
+
+  .staff {
+    display: flex;
+    flex-direction: column;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+  }
+
+  section {
+    height: 100vh; /* Full height of the viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+  }
+
+  .s1, .s2, .s3, .s4 {
+    color: white;
+    text-align: center;
+  }
+  span{
+    color: rgb(250, 211, 36);
+  }
+  a {
+  position: relative; /* Position relative for the pseudo-element */
+  color: rgb(250, 211, 36);
+  text-decoration: none; /* Remove the default underline */
+}
+
+a::after {
+  content: ""; /* Create an empty content for the pseudo-element */
+  position: absolute;
+  left: 50%; /* Start from the center */
+  bottom: 0; /* Position at the bottom */
+  width: 0; /* Initial width is 0 */
+  height: 2px; /* Set the height of the underline */
+  background-color: rgb(250, 211, 36); /* Match the link color */
+  transition: width 0.5s ease, left 0.5s ease; /* Smooth transition for width and position */
+}
+
+a:hover::after {
+  width: 100%; /* Expand to full width on hover */
+  left: 0; /* Move to the left */
+}
+
+
+  .s1 {
+  color: white;
+  font-size: 35px;
+  text-align: center;
+}
+.h2{
+  margin-top: -100px;
+}
+
+.s2{
+  text-align: start;
+  color: white;
+  justify-content: start;
+  margin-left: 10%;
+
+}
+.s3{
+  text-align: end;
+  color: white;
+  justify-content: end;
+  margin-right: 10%;
+
+}
+.s4{
+  text-align: center;
+  color: white;
+  justify-content: center;
+
+}
+</style>

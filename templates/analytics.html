@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Analytics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Danfo&family=DynaPuff:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&family=Sixtyfour+Convergence&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" type="x-icon" href="/static/pumpkin-bag.png">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+         body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: "Syne", sans-serif;
+            box-sizing: border-box;
+            background: rgb(255, 115, 0);
+            background-image: url(/static/noise\ copy.svg);
+            z-index: -1;
+        }
+
+        h1 {
+            text-align: center;
+            color: rgb(0, 0, 0);
+            text-shadow: 0.15px -0.15px 0px #ffffff,
+                         0.30px -0.30px 0px #ffffff,
+                         0.45px -0.45px 0px #ffffff,
+                         0.60px -0.60px 0px #ffffff,
+                         0.75px -0.75px 0px #ffffff,
+                         0.90px -0.90px 0px #ffffff,
+                         1.05px -1.05px 0px #ffffff,
+                         1.20px -1.20px 0px #ffffff,
+                         1.35px -1.35px 0px #ffffff,
+                         1.50px -1.50px 0px #ffffff,
+                         1.65px -1.65px 0px #ffffff,
+                         1.80px -1.80px 0px #ffffff;
+        }
+
+        table {
+            width: 80%; /* Changed from 100% to 80% */
+            border-collapse: collapse;
+            margin: 40px auto ; /* Centered the table */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        table th, table td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #f2f2f2;
+            color: #000000;
+        }
+
+        table td {
+            background-color: white;
+            color: #000000;
+        }
+
+        .pagination {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .pagination a {
+            color: #333;
+            text-decoration: none;
+            padding: 8px 16px;
+            margin: 0 4px;
+            background-color: #f2f2f2;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            box-shadow: 1px -1px 0px #ffffff,
+                        2px -2px 0px #ffffff,
+                        6px -6px 0px #ffffff,
+                        7px -7px 0px #ffffff,
+                        8px -8px 0px #ffffff,
+                        9px -9px 0px #ffffff;
+        }
+
+        .pagination a:hover {
+            background-color: #ddd;
+        }
+        button:hover {
+            background-color: #ddd;
+        }
+        .summary {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            margin: 20px auto;
+        }
+
+        .summary-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            flex: 1;
+            margin: 0 10px;
+        }
+
+        .summary-box h3 {
+            margin: 0;
+        }
+
+        .filters {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.filter {
+    flex: 1;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Aligns both the label and input in the center */
+}
+
+.filter label {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.filter input {
+    width: 100%; /* Makes the input take up full width */
+    padding: 8px; /* Adds padding for a better appearance */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center; /* Ensures the input text is centered */
+}
+
+.filter-staff {
+    width: 80%;
+    margin: 0 auto;
+}
+
+button {
+    justify-content: center;
+    display: flex;
+    margin: 0 auto;
+    color: #333;
+    padding: 8px 16px;
+            background-color: #f2f2f2;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            box-shadow: 1px -1px 0px #ffffff,
+                        2px -2px 0px #ffffff,
+                        6px -6px 0px #ffffff,
+                        7px -7px 0px #ffffff,
+                        8px -8px 0px #ffffff,
+                        9px -9px 0px #ffffff;
+
+
+}
+label{
+    text-shadow: 0.15px -0.15px 0px #ffffff,
+    0.30px -0.30px 0px #ffffff,
+    0.45px -0.45px 0px #ffffff,
+    0.60px -0.60px 0px #ffffff,
+    0.75px -0.75px 0px #ffffff,
+    0.90px -0.90px 0px #ffffff,
+    1.05px -1.05px 0px #ffffff,
+    1.20px -1.20px 0px #ffffff,
+    1.35px -1.35px 0px #ffffff,
+    1.50px -1.50px 0px #ffffff,
+    1.65px -1.65px 0px #ffffff,
+    1.80px -1.80px 0px #ffffff;
+}
+
+input {
+    justify-content: center;
+}
+        /* Table styles remain the same */
+    </style>
+</head>
+<body>
+    <h1>Sales Analytics</h1>
+
+    <!-- Summary Section -->
+    <div class="summary">
+        <div class="summary-box">
+            <h3>Total Sales</h3>
+            <p>{{ total_sales }}</p>
+        </div>
+        <div class="summary-box">
+            <h3>Total Sum</h3>
+            <p>{{ total_sum }}</p>
+        </div>
+    </div>
+
+    <!-- Filter Section -->
+    <form action="/analytics" method="GET">
+        <div class="filter-staff">
+            <div class="filters">
+                <div class="filter">
+                    <label for="start_date">Start Date</label>
+                    <input type="date" id="start_date" name="start_date" value="{{ start_date }}">
+                </div>
+                <div class="filter">
+                    <label for="end_date">End Date</label>
+                    <input type="date" id="end_date" name="end_date" value="{{ end_date }}">
+                </div>
+                <div class="filter">
+                    <label for="store">Store</label>
+                    <input type="text" id="store" name="store" placeholder="Store Name" value="{{ store }}">
+                </div>
+                <div class="filter">
+                    <label for="product">Product</label>
+                    <input type="text" id="product" name="product" placeholder="Product Name" value="{{ product }}">
+                </div>
+            </div>
+
+            <!-- Add a submit button to apply filters -->
+            <div class="butt" style="margin: 20px;">
+                <button type="submit">Apply Filters</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Sales Data Table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Store</th>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for sale in sales %}
+            <tr>
+                <td>{{ sale[0] }}</td>
+                <td>{{ sale[1] }}</td>
+                <td>{{ sale[2] }}</td>
+                <td>{{ sale[3] }}</td>
+                <td>{{ sale[4] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Pagination Controls -->
+    <div class="pagination">
+        {% if page > 0 %}
+            <a href="{{ url_for('sales', page=page-1, per_page=per_page, start_date=start_date, end_date=end_date, store=store, product=product) }}">Previous</a>
+        {% endif %}
+        <a href="{{ url_for('sales', page=page+1, per_page=per_page, start_date=start_date, end_date=end_date, store=store, product=product) }}">Next</a>
+    </div>
+
+</body>
+</html>

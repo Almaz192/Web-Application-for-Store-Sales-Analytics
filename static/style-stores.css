@@ -1,0 +1,177 @@
+
+body {
+
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: "Syne", sans-serif;
+    box-sizing: border-box;
+    background: rgb(255, 115, 0);
+    background-image: url(noise\ copy.svg);
+    z-index: -1;
+}
+img {justify-content: center;
+    align-items: center;
+    width: 30px; 
+    height: 30px; 
+    filter: invert(100%);  
+    transform: perspective(500px) rotateX(10deg) rotateY(10deg);
+
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.store-image{
+    margin: 0 auto;
+    width: 250px;
+    height: 300px;
+    border: rgb(255, 255, 255) solid 1px ;
+    box-shadow: 1px -1px 0px #ffffff,
+    2px -2px 0px #ffffff,
+    3px -3px 0px #ffffff,
+    4px -4px 0px #ffffff,
+    5px -5px 0px #ffffff,
+    6px -6px 0px #ffffff;
+
+}
+h1 {
+    text-align: center;
+    margin: 50px;
+    color: rgb(0, 0, 0);
+    text-shadow: 0.15px -0.15px 0px #ffffff,
+    0.30px -0.30px 0px #ffffff,
+    0.45px -0.45px 0px #ffffff,
+    0.60px -0.60px 0px #ffffff,
+    0.75px -0.75px 0px #ffffff,
+    0.90px -0.90px 0px #ffffff,
+    1.05px -1.05px 0px #ffffff,
+    1.20px -1.20px 0px #ffffff,
+    1.35px -1.35px 0px #ffffff,
+    1.50px -1.50px 0px #ffffff,
+    1.65px -1.65px 0px #ffffff,
+    1.80px -1.80px 0px #ffffff;
+}
+.info{
+    margin: 0 20px;
+    display:block;
+    text-align: start;
+    align-items: center;
+    
+}
+
+.design {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    margin: 0 auto;
+    max-width: 80%;
+    height: auto;
+}
+.store-card h2 {
+
+    font-size: 1.5em;
+    color: #ffffff;
+    margin-bottom: 10px;
+
+}
+
+
+.store-card {
+    display: flex;
+    flex-direction: column;  /* Stack the image and text vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center;     /* Center content horizontally */
+    border-radius: 8px;
+    border: white solid 3px;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 1px -1px 0px #ffffff,
+                2px -2px 0px #ffffff,
+                6px -6px 0px #ffffff,
+                7px -7px 0px #ffffff,
+                8px -8px 0px #ffffff,
+                9px -9px 0px #ffffff,
+                10px -10px 0px #ffffff,
+                11px -11px 0px #ffffff,
+                12px -12px 0px #ffffff;
+}
+
+
+.store-card h2 {
+    font-size: 1.5em;
+    color: #000000;
+    margin-bottom: 10px;
+    align-items: center;
+    text-shadow: 0.15px -0.15px 0px #ffffff,
+    0.30px -0.30px 0px #ffffff,
+    0.45px -0.45px 0px #ffffff,
+    0.60px -0.60px 0px #ffffff,
+    0.75px -0.75px 0px #ffffff,
+    0.90px -0.90px 0px #ffffff,
+    1.05px -1.05px 0px #ffffff,
+    1.20px -1.20px 0px #ffffff,
+    1.35px -1.35px 0px #ffffff,
+    1.50px -1.50px 0px #ffffff,
+    1.65px -1.65px 0px #ffffff,
+    1.80px -1.80px 0px #ffffff;
+}
+
+.store-card p {
+    
+    font-size: 1em;
+    color: #000000;
+    margin-bottom: 5px;
+
+    text-shadow: 0.15px -0.15px 0px #ffffff,
+    0.30px -0.30px 0px #ffffff,
+    0.45px -0.45px 0px #ffffff,
+    0.60px -0.60px 0px #ffffff,
+    0.75px -0.75px 0px #ffffff,
+    0.90px -0.90px 0px #ffffff,
+    1.05px -1.05px 0px #ffffff,
+    1.20px -1.20px 0px #ffffff,
+    1.35px -1.35px 0px #ffffff,
+    1.50px -1.50px 0px #ffffff,
+    1.65px -1.65px 0px #ffffff,
+    1.80px -1.80px 0px #ffffff;
+}
+
+.store-card p strong {
+    align-items: center;
+    color: #000000;
+    text-shadow: 0.15px -0.15px 0px #ffffff,
+    0.30px -0.30px 0px #ffffff,
+    0.45px -0.45px 0px #ffffff,
+    0.60px -0.60px 0px #ffffff,
+    0.75px -0.75px 0px #ffffff,
+    0.90px -0.90px 0px #ffffff,
+    1.05px -1.05px 0px #ffffff,
+    1.20px -1.20px 0px #ffffff,
+    1.35px -1.35px 0px #ffffff,
+    1.50px -1.50px 0px #ffffff,
+    1.65px -1.65px 0px #ffffff,
+    1.80px -1.80px 0px #ffffff;
+}
+.info p {
+    display: flex;
+    align-items: center; /* Aligns items vertically in the center */
+
+}
+
+.info img {
+    margin-right: 10px; /* Adjusts spacing between the icon and text */
+    vertical-align: middle; /* Aligns the icon with the text */
+}
+
+.info img {
+    margin-right: 10px; 
+    vertical-align: middle; 
+    width: 30px; 
+    height: 30px;
+}
+
+
+

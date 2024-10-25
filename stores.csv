@@ -1,0 +1,31 @@
+id,name,address,working_time
+1,MetroMart,"123 Main Street, Springfield, IL 62704",8:00 AM - 8:00 PM
+2,City Corner Grocery,"456 Pine Avenue, Boston, MA 02108",7:00 AM - 9:00 PM
+3,Fresh Foods Market,"789 Oak Drive, Austin, TX 78701",9:00 AM - 10:00 PM
+4,Sunshine Mart,"101 Elm Street, Seattle, WA 98101",6:00 AM - 6:00 PM
+5,Harborview Store,"232 Seaside Blvd, Miami, FL 33101",10:00 AM - 9:00 PM
+6,Neighborhood Grocers,"675 Walnut Ave, Denver, CO 80202",7:00 AM - 8:00 PM
+7,Parkside Essentials,"843 Birch Lane, Chicago, IL 60604",9:00 AM - 7:00 PM
+8,Green Valley Organics,"120 Willow Way, Portland, OR 97204",8:00 AM - 8:00 PM
+9,Ocean Breeze Market,"234 Beach Road, San Diego, CA 92103",9:00 AM - 9:00 PM
+10,The General Store,"322 Cedar Street, Atlanta, GA 30303",6:00 AM - 6:00 PM
+11,FamilyMart,"789 Maple Ave, Columbus, OH 43215",8:00 AM - 8:00 PM
+12,Urban Fare,"456 Oakwood Drive, Phoenix, AZ 85001",7:00 AM - 10:00 PM
+13,Eco Choice Market,"123 Pecan Blvd, Houston, TX 77002",9:00 AM - 9:00 PM
+14,Fairview Grocers,"678 Poplar Street, Nashville, TN 37201",6:00 AM - 6:00 PM
+15,Seaside Sundries,"321 Magnolia Ave, Orlando, FL 32801",7:00 AM - 8:00 PM
+16,The Fresh Basket,"910 Elmwood Lane, Las Vegas, NV 89101",9:00 AM - 8:00 PM
+17,Downtown Deli,"213 Pinecone Dr, Salt Lake City, UT 84101",8:00 AM - 9:00 PM
+18,Golden Harvest Market,"345 Valley Street, Kansas City, MO 64106",7:00 AM - 8:00 PM
+19,Sunset Grocers,"678 River Road, St. Louis, MO 63101",9:00 AM - 10:00 PM
+20,Riverfront Foods,"789 Orchard Street, Minneapolis, MN 55401",6:00 AM - 7:00 PM
+21,MarketPlace 24,"123 Applewood Dr, San Francisco, CA 94103",8:00 AM - 8:00 PM
+22,Central City Grocers,"456 Willow St, Charlotte, NC 28202",7:00 AM - 9:00 PM
+23,Grand Avenue Market,"789 Forest Ave, Dallas, TX 75201",9:00 AM - 8:00 PM
+24,Northside Essentials,"321 Sunset Blvd, New Orleans, LA 70112",6:00 AM - 6:00 PM
+25,Crescent Grocers,"678 Sequoia St, Los Angeles, CA 90001",8:00 AM - 8:00 PM
+26,Harvest Foods,"987 Redwood Dr, Sacramento, CA 95814",9:00 AM - 7:00 PM
+27,Valley Fresh Market,"123 Sycamore Rd, Tucson, AZ 85701",7:00 AM - 9:00 PM
+28,The Corner Mart,"456 Palm St, San Antonio, TX 78201",8:00 AM - 8:00 PM
+29,Greenway Mart,"789 Cypress St, Austin, TX 78702",7:00 AM - 7:00 PM
+30,Redwood Grocers,"987 Juniper Dr, Portland, OR 97205",9:00 AM - 9:00 PM

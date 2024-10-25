@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" type="x-icon" href="/static/pumpkin-bag.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: "Syne", sans-serif;
+            box-sizing: border-box;
+            background: rgb(255, 115, 0);
+            background-image: url(/static/noise\ copy.svg);
+            z-index: -1;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 50px;
+            color: rgb(0, 0, 0);
+            text-shadow: 0.15px -0.15px 0px #ffffff,
+                         0.30px -0.30px 0px #ffffff,
+                         0.45px -0.45px 0px #ffffff,
+                         0.60px -0.60px 0px #ffffff,
+                         0.75px -0.75px 0px #ffffff,
+                         0.90px -0.90px 0px #ffffff,
+                         1.05px -1.05px 0px #ffffff,
+                         1.20px -1.20px 0px #ffffff,
+                         1.35px -1.35px 0px #ffffff,
+                         1.50px -1.50px 0px #ffffff,
+                         1.65px -1.65px 0px #ffffff,
+                         1.80px -1.80px 0px #ffffff;
+        }
+
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 60px;
+            margin: 0 auto;
+            max-width: 80%;
+            height: auto;
+        }
+
+        .product-card {
+            border-radius: 8px;
+            border: white solid 3px;
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 1px -1px 0px #ffffff,
+                        2px -2px 0px #ffffff,
+                        6px -6px 0px #ffffff,
+                        7px -7px 0px #ffffff,
+                        8px -8px 0px #ffffff,
+                        9px -9px 0px #ffffff,
+                        10px -10px 0px #ffffff,
+                        11px -11px 0px #ffffff,
+                        12px -12px 0px #ffffff;
+        }
+
+        .product-card h2 {
+            font-size: 1.5em;
+            color: #000000;
+            margin-bottom: 10px;
+            text-shadow: 0.15px -0.15px 0px #ffffff,
+                         0.30px -0.30px 0px #ffffff,
+                         0.45px -0.45px 0px #ffffff,
+                         0.60px -0.60px 0px #ffffff,
+                         0.75px -0.75px 0px #ffffff,
+                         0.90px -0.90px 0px #ffffff,
+                         1.05px -1.05px 0px #ffffff,
+                         1.20px -1.20px 0px #ffffff,
+                         1.35px -1.35px 0px #ffffff,
+                         1.50px -1.50px 0px #ffffff,
+                         1.65px -1.65px 0px #ffffff,
+                         1.80px -1.80px 0px #ffffff;
+        }
+
+        .product-card p {
+            font-size: 1em;
+            color: #000000;
+            margin-bottom: 5px;
+            text-shadow: 0.15px -0.15px 0px #ffffff,
+                         0.30px -0.30px 0px #ffffff,
+                         0.45px -0.45px 0px #ffffff,
+                         0.60px -0.60px 0px #ffffff,
+                         0.75px -0.75px 0px #ffffff,
+                         0.90px -0.90px 0px #ffffff,
+                         1.05px -1.05px 0px #ffffff,
+                         1.20px -1.20px 0px #ffffff,
+                         1.35px -1.35px 0px #ffffff,
+                         1.50px -1.50px 0px #ffffff,
+                         1.65px -1.65px 0px #ffffff,
+                         1.80px -1.80px 0px #ffffff;
+        }
+
+        .product-card p strong {
+            color: #000000;
+            text-shadow: 0.15px -0.15px 0px #ffffff,
+                         0.30px -0.30px 0px #ffffff,
+                         0.45px -0.45px 0px #ffffff,
+                         0.60px -0.60px 0px #ffffff,
+                         0.75px -0.75px 0px #ffffff,
+                         0.90px -0.90px 0px #ffffff,
+                         1.05px -1.05px 0px #ffffff,
+                         1.20px -1.20px 0px #ffffff,
+                         1.35px -1.35px 0px #ffffff,
+                         1.50px -1.50px 0px #ffffff,
+                         1.65px -1.65px 0px #ffffff,
+                         1.80px -1.80px 0px #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Products</h1>
+    <div class="products-container">
+        {% for product in products %}
+        <div class="product-card">
+            <h2>{{ product[1] }}</h2> <!-- Product Name -->
+            <p><strong>Price:</strong> {{ product[2] }} som</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

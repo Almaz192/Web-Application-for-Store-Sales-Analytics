@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" type="x-icon" href="/static/pumpkin-bag.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Danfo&family=DynaPuff:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&family=Sixtyfour+Convergence&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <title>Stores</title>
+    <link rel="stylesheet" href="/static/style-stores.css" />
+
+
+</head>
+<body>
+    <h1>Stores</h1>
+    <div class="stores-container">
+        <div class="design">
+            {%  for store in stores %}
+            <div class="store-card cube-wrap">
+                <h2>{{ store[1] }}</h2> 
+                <div class="store-image"></div>
+                <div class="info">
+                    <p><img src="/static/clock.png" alt=""> {{ store[3] }}</p>
+                    <p><img src="/static/location.png" alt=""> {{ store[2] }}</p>
+                </div>
+                
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
