@@ -10,13 +10,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Danfo&family=DynaPuff:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&family=Sixtyfour+Convergence&family=Syne:wght@400..800&display=swap" rel="stylesheet">
   </head>
   <body>
-
+      <div class="loader-container" id="loader">
+        <svg viewBox="0 0 400 160 ">
+          <text x="20%" y="50%" dy="0.32rem" text-achor="middle" class="text-body">
+            Almaz
+          </text>
+          <text x="50%" y="50%" dy="0.32rem" dx="6.5rem" text-achor="middle" class="text-body">
+            .
+          </text>
+        </svg>
+          
+      </div>
     <div class="staff">
       <section class="s1">
         
         <h1>Welcome to <span>Store Sales Analytics!</span> <br> This application provides insights <br> into <span>store</span> performance, product <br> details, and <span>sales analytics.</span></h1>
       </section>
-      <marquee scrollamount="100" direction="right" class="caution-tape"> CAUTION!
+      <marquee scrollamount="60" direction="right" class="caution-tape"> CAUTION!
         CAUTION!
         CAUTION!
         CAUTION!
@@ -44,7 +54,7 @@
         <h1 class="h2">This page displays a list of all stores, including their names,<br> addresses,  and working hours. Explore <span><a href="http://127.0.0.1:5000/stores">stores</a></span><br> information  for better understanding <br> of your  store network.</h1>
         
       </section>
-      <marquee scrollamount="100" direction="right" class="caution-tape"> DON'T SCROLL!
+      <marquee scrollamount="60" direction="right" class="caution-tape"> DON'T SCROLL!
         DON'T SCROLL!
         DON'T SCROLL!
         DON'T SCROLL!
@@ -65,10 +75,11 @@
         DON'T SCROLL!
       </marquee>
       <section class="s3">
-        <h1 class="h3">View all available <span><a href="http://127.0.0.1:5000/products">products</a></span> along with  their<br> prices. Find detailed information about each product<br> and explore pricing to help track product performance.</h1>
+        <h1 class="h3">View all av
+          ailable <span><a href="http://127.0.0.1:5000/products">products</a></span> along with  their<br> prices. Find detailed information about each product<br> and explore pricing to help track product performance.</h1>
 
       </section>
-      <marquee scrollamount="100" direction="right" class="caution-tape"> STOP!!!
+      <marquee scrollamount="60" direction="right" class="caution-tape"> STOP!!!
                 
 
       </marquee>
@@ -77,9 +88,23 @@
 
       </section>
     </div>
-
-    <!-- JavaScript for smooth debounced scrolling between sections -->
     <script>
+      window.addEventListener('load', () => {
+    const loader = document.getElementById('loader');
+    const body = document.body;
+
+    // Add a class to enable the loaded styles
+    body.classList.add('loaded');
+    
+    // Fade out loader
+    setTimeout(() => {
+        loader.style.opacity = 0; // Fade out
+        setTimeout(() => {
+            loader.style.visibility = 'hidden'; // Hide loader after fade
+        }, 400); // Match the transition duration
+    }, 3000); // Delay before hiding the loader
+});
+
       const sections = document.querySelectorAll("section"); // Get all sections
       let currentSectionIndex = 0; // Track the current section
       let isScrolling = false; // Prevent multiple scrolls until transition completes
@@ -118,7 +143,7 @@
         if (event.deltaY > 0) {
           // Scroll down
           if (currentSectionIndex < sections.length - 1) {
-            currentSectionIndex++;
+            currentSectionIndex++;  
             scrollToSection(currentSectionIndex);
           }
         } else {
@@ -136,6 +161,67 @@
 </html>
 
 <style>
+  .loader-container {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background-color: rgb(255, 115, 0);
+    display: grid;
+    place-content: center;
+    transition: opacity .4s ease-in-out, visibility .4s ease-in-out;
+}
+
+body.hidden {
+    overflow: hidden; /* Prevent scrolling when loader is visible */
+}
+
+body.loaded {
+    overflow: auto; /* Enable scrolling after loader is hidden */
+}
+
+.staff {
+    display: none; /* Hide content initially */
+}
+
+body.loaded .staff {
+    display: flex; /* Show content when loaded */
+}
+
+  svg{
+    width: 20rem;
+  }
+  svg text{
+    font-size: 5rem;
+    stroke-width: 2;
+  }
+  svg text.text-body{
+    animation: 4s infinite alternate animate-stroke;
+    stroke: rgb(0, 0, 0);
+
+  }
+  @keyframes animate-stroke{
+    0%{
+      fill: transparent;
+      stroke: rgb(0, 0, 0);
+      stroke-width:3 ;
+      stroke-dashoffset: 25%;
+      stroke-dasharray: 0 32%;
+    }
+    50%{
+      fill: transparents;
+      stroke: rgb(0, 0, 0);
+      stroke-width: 3;
+
+    }
+    80%,100%{
+
+      fill: white;
+      stroke: transparent;
+      stroke-width: 0;
+      stroke-dashoffset: -25%;
+      stroke-dasharray: 32% 0;
+    }
+  }
 marquee {
     background-color: rgb(255, 238, 0); /* Yellow background */
     height: 100px;
