@@ -107,9 +107,9 @@ def sales():
     # Close the database connection
     sales_conn.close()
 
-    # Format the total sales and total sum with commas
-    formatted_total_sales = f"{total_sales:,} som"
-    formatted_total_sum = f"{total_sum:,} som" 
+    # Format the total sales and total sum with checks for None
+    formatted_total_sales = f"{total_sales:,} som" if total_sales is not None else "0 som"
+    formatted_total_sum = f"{total_sum:,} som" if total_sum is not None else "0 som"
 
     # Pass the data to the template
     return render_template(
@@ -120,12 +120,10 @@ def sales():
         page=page,
         per_page=per_page,
         start_date=start_date,
-
         end_date=end_date,
         store=selected_store,
         product=selected_product
     )
-
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
