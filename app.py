@@ -45,7 +45,7 @@ def sales():
 
     # Get pagination details
     page = int(request.args.get('page', 0))
-    per_page = int(request.args.get('per_page', 15))
+    per_page = int(request.args.get('per_page', 8))
     offset = page * per_page
 
     # Base query with joins
@@ -109,7 +109,7 @@ def sales():
 
     # Format the total sales and total sum with commas
     formatted_total_sales = f"{total_sales:,} som"
-    formatted_total_sum = f"{total_sum:,} som"
+    formatted_total_sum = f"{total_sum:,} som" 
 
     # Pass the data to the template
     return render_template(
@@ -120,6 +120,7 @@ def sales():
         page=page,
         per_page=per_page,
         start_date=start_date,
+
         end_date=end_date,
         store=selected_store,
         product=selected_product
