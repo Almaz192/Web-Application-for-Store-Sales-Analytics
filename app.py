@@ -108,8 +108,8 @@ def sales():
     sales_conn.close()
 
     # Format the total sales and total sum with commas
-    formatted_total_sales = f"{total_sales:,}" if total_sales is not None else "0"
-    formatted_total_sum = f"{total_sum:,}" if total_sum is not None else "0"
+    formatted_total_sales = f"{total_sales:,} som"
+    formatted_total_sum = f"{total_sum:,} som"
 
     # Pass the data to the template
     return render_template(
